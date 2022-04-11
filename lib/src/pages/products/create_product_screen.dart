@@ -87,7 +87,7 @@ class _CreateProductPageState extends State<CreateProductPage> {
         .then((value) {
       Get.back();
       if (value == null) {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Tạo thất bại',
           subTitle: 'Vui lòng kiểm tra đủ các trường',
         );
@@ -95,7 +95,7 @@ class _CreateProductPageState extends State<CreateProductPage> {
       } else {
         productController.initialController();
         productController.getAllProduct();
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Tạo thành công',
           subTitle: 'Tạo thành công sản phẩm',
         );

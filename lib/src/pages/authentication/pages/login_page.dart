@@ -153,7 +153,7 @@ class _LoginPagesState extends State<LoginPages> {
                         .then((value) {
                       Get.back();
                       if (value == null) {
-                        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                        GetSnackBar getSnackBar = GetSnackBar(
                           title: 'Đăng nhập thất bại!',
                           subTitle: 'Sai tài khoản hoặc mật khẩu',
                         );
@@ -163,7 +163,7 @@ class _LoginPagesState extends State<LoginPages> {
                           UserModel.fromLogin(value),
                         );
                         print("dang nhap thanh cong");
-                        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                        GetSnackBar getSnackBar = GetSnackBar(
                           title: 'Đăng nhập thành công!',
                           subTitle: 'Đăng nhập thành công',
                         );

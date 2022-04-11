@@ -13,8 +13,7 @@ import 'package:freshfood/src/public/constant.dart';
 import 'package:freshfood/src/public/styles.dart';
 import 'package:freshfood/src/repository/user_repository.dart';
 import 'package:freshfood/src/routes/app_pages.dart';
-import 'package:freshfood/src/utils/snackbar.dart' as GetSnackBar;
-
+import 'package:freshfood/src/utils/snackbar.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
@@ -263,19 +262,19 @@ class _EditAddressPageState extends State<EditAddressPage> {
                         .then((value) {
                       if (value == true) {
                         addressController.getAllAddress();
-                        // var getSnackBar = GetSnackBar(
-                        //   title: 'Thêm địa chỉ thành công',
-                        //   subTitle: '',
-                        // );
+                        GetSnackBar getSnackBar = GetSnackBar(
+                          title: 'Thêm địa chỉ thành công',
+                          subTitle: '',
+                        );
                         Get.back();
 
-                        //getSnackBar.show();
+                        getSnackBar.show();
                       } else {
-                        // GetSnackBar getSnackBar = GetSnackBar(
-                        //   title: 'Thêm địa chỉ thất bại',
-                        //   subTitle: '',
-                        // );
-                        // getSnackBar.show();
+                        GetSnackBar getSnackBar = GetSnackBar(
+                          title: 'Thêm địa chỉ thất bại',
+                          subTitle: '',
+                        );
+                        getSnackBar.show();
                       }
                     });
                   },

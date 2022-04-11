@@ -84,7 +84,7 @@ handleReceiveNotification(context) async {
           //   showDialogFCM(context, message);
         }
       } else {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: message.notification.title,
           subTitle: limitString(message.notification.body, 35),
           handlePressed: () {

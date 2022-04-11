@@ -52,13 +52,13 @@ class ProductDetailController extends GetxController {
       if (value.isNotEmpty) {
         var cartController = Get.put(CartController());
         cartController.getListProduct();
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Thành công',
           subTitle: 'Thêm vào giỏ hàng thành công',
         );
         getSnackBar.show();
       } else {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Thất bại',
           subTitle: 'Thêm vào giỏ hàng thất bại',
         );

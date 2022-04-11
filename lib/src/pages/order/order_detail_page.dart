@@ -475,8 +475,7 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                                     status: widget.order.status + 1)
                                 .then((value) {
                               if (value == true) {
-                                CustomGetSnackBar getSnackBar =
-                                    CustomGetSnackBar(
+                                GetSnackBar getSnackBar = GetSnackBar(
                                   title:
                                       'Chuyển trạng thái đơn hàng thành công',
                                   subTitle:
@@ -491,8 +490,7 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                                     : orderController.getOrderByAdmin(
                                         search: '', limit: 10, skip: 1);
                               } else {
-                                CustomGetSnackBar getSnackBar =
-                                    CustomGetSnackBar(
+                                GetSnackBar getSnackBar = GetSnackBar(
                                   title: 'Chuyển trạng thái đơn hàng thất bại',
                                   subTitle: '',
                                 );

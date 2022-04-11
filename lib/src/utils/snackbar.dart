@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
-class CustomGetSnackBar {
+class GetSnackBar {
   final String title;
   final String subTitle;
   VoidCallback handlePressed;
-  CustomGetSnackBar({this.title, this.subTitle, this.handlePressed});
+  GetSnackBar({this.title, this.subTitle, this.handlePressed});
 
   show() {
     Get.snackbar(

@@ -25,7 +25,7 @@ class ProfileController extends GetxController {
       Get.back();
       Get.back();
       if (value == null) {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Thất bại',
           subTitle: 'Cập nhật avatar thất bại',
         );
@@ -34,7 +34,7 @@ class ProfileController extends GetxController {
         userProvider.user.avatar = value['image'];
         userProvider.setUserProvider(userProvider.user);
         update();
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Thành công',
           subTitle: 'Cập nhật avatar thành công',
         );
@@ -47,7 +47,7 @@ class ProfileController extends GetxController {
     UserRepository().updateImage(avatar: image).then((value) {
       Get.back();
       if (value == null) {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Thất bại',
           subTitle: 'Cập nhật avatar thất bại',
         );
@@ -56,7 +56,7 @@ class ProfileController extends GetxController {
         userProvider.user.avatar = value['image'];
         userProvider.setUserProvider(userProvider.user);
         update();
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Thành công',
           subTitle: 'Cập nhật avatar thành công',
         );

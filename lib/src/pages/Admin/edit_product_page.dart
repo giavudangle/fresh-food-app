@@ -103,7 +103,7 @@ class _EditProductPageState extends State<EditProductPage> {
         .then((value) {
       Get.back();
       if (value == null) {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Cập nhật thất bại',
           subTitle: 'Vui lòng kiểm tra đủ các trường',
         );
@@ -111,7 +111,7 @@ class _EditProductPageState extends State<EditProductPage> {
       } else {
         productController.initialController();
         productController.getAllProduct(search: '', groupProduct: '');
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Cập nhật thành công',
           subTitle: '',
         );

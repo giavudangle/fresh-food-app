@@ -44,14 +44,14 @@ class _ProfilePagesState extends State<ProfilePages> {
   //   UserRepository().updateImage(avatar: _image).then((value) {
   //     Get.back();
   //     if (value == null) {
-  //       CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+  //       GetSnackBar getSnackBar = GetSnackBar(
   //         title: 'Thất bại',
   //         subTitle: 'Cập nhật avatar thất bại',
   //       );
   //       getSnackBar.show();
   //     } else {
   //       profileController.user.avatar = value['image'];
-  //       CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+  //       GetSnackBar getSnackBar = GetSnackBar(
   //         title: 'Thành công',
   //         subTitle: 'Cập nhật avatar thành công',
   //       );
@@ -356,8 +356,7 @@ class _ProfilePagesState extends State<ProfilePages> {
                                     .then((value) {
                                   Get.back();
                                   if (value == false) {
-                                    CustomGetSnackBar getSnackBar =
-                                        CustomGetSnackBar(
+                                    GetSnackBar getSnackBar = GetSnackBar(
                                       title: 'Sửa thông tin thất bại!',
                                       subTitle: '',
                                     );
@@ -370,8 +369,7 @@ class _ProfilePagesState extends State<ProfilePages> {
                                     userProvider
                                         .setUserProvider(userProvider.user);
                                     Get.back();
-                                    CustomGetSnackBar getSnackBar =
-                                        CustomGetSnackBar(
+                                    GetSnackBar getSnackBar = GetSnackBar(
                                       title: 'Thành công',
                                       subTitle: 'Cập nhật thông tin thành công',
                                     );

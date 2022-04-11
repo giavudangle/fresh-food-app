@@ -193,8 +193,7 @@ class _SignupPageState extends State<SignupPage> {
                                 Get.back();
                                 if (value == null) {
                                   print(value);
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Đăng kí thất bại!',
                                     subTitle: 'Email đã được đăng kí.',
                                   );
@@ -203,8 +202,7 @@ class _SignupPageState extends State<SignupPage> {
                                   userProvider.setUser(
                                     UserModel.fromLogin(value),
                                   );
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Đăng kí thành công',
                                     subTitle: '',
                                   );

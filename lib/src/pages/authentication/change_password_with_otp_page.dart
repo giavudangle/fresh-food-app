@@ -162,15 +162,13 @@ class _ChangePasswordWithOtpState extends State<ChangePasswordWithOtp> {
                                   print("value ne");
                                   print(widget.token);
 
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Đổi mật khẩu không thành công',
                                     subTitle: '',
                                   );
                                   getSnackBar.show();
                                 } else {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Đổi mật khẩu thành công',
                                     subTitle: '',
                                   );

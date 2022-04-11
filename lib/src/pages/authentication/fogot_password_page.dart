@@ -110,7 +110,7 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
                                 arguments: {"email": email});
                             // getSnackBar.show();
                           } else {
-                            CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                            GetSnackBar getSnackBar = GetSnackBar(
                               title: 'Email không tồn tại',
                               subTitle: '',
                             );

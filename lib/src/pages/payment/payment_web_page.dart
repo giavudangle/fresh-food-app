@@ -18,7 +18,7 @@ class PaymentWebPage extends StatefulWidget {
 class _PaymentWebPageState extends State<PaymentWebPage> {
   // final _key = UniqueKey();
   WebViewController _controller;
-  CustomGetSnackBar getSnackBar;
+  GetSnackBar getSnackBar;
 
   @override
   void initState() {
@@ -48,7 +48,7 @@ class _PaymentWebPageState extends State<PaymentWebPage> {
               .toLowerCase()
               .startsWith('$baseUrl/user/successPayPal'.toLowerCase())) {
             // pickAddressController.disposeFormInput();
-            getSnackBar = CustomGetSnackBar(
+            getSnackBar = GetSnackBar(
               title: 'Thanh toán thành công!',
               subTitle: 'Hãy theo dõi quá trình vận đơn',
             );
@@ -58,7 +58,7 @@ class _PaymentWebPageState extends State<PaymentWebPage> {
               .toLowerCase()
               .startsWith('$baseUrl/user/failVnPay'.toLowerCase())) {
             // pickAddressController.disposeFormInput();
-            getSnackBar = CustomGetSnackBar(
+            getSnackBar = GetSnackBar(
               title: 'Thanh toán thất bại!',
               subTitle: 'Bạn chưa thanh toán đơn hàng này!',
             );
@@ -68,7 +68,7 @@ class _PaymentWebPageState extends State<PaymentWebPage> {
               .toLowerCase()
               .startsWith('$baseUrl/user/successVnPay'.toLowerCase())) {
             // pickAddressController.disposeFormInput();
-            getSnackBar = CustomGetSnackBar(
+            getSnackBar = GetSnackBar(
               title: 'Thanh toán thành công!',
               subTitle: 'Hãy theo dõi quá trình vận đơn',
             );

@@ -197,7 +197,7 @@ class _CartPageState extends State<CartPage> {
 
                         print(temp);
                         if (temp.length <= 0) {
-                          CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                          GetSnackBar getSnackBar = GetSnackBar(
                             title: 'Bạn chưa chọn sản phẩm nào',
                             subTitle:
                                 'Vui lòng chọn ít nhất 1 sản phẩm để thanh toán',

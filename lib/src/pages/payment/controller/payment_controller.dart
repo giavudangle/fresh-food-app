@@ -90,7 +90,7 @@ class PaymentController extends GetxController {
                 arguments: {"link": value['link']});
           } else {
             Get.offAllNamed(Routes.ROOT);
-            CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+            GetSnackBar getSnackBar = GetSnackBar(
               title: 'Tạo đơn hàng thành công',
               subTitle: 'Bạn có thể theo dõi quá trình vận đơn tại mục Xem đơn',
             );
@@ -116,7 +116,7 @@ class PaymentController extends GetxController {
                 arguments: {"link": value['link']});
           } else {
             Get.offAllNamed(Routes.ROOT);
-            CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+            GetSnackBar getSnackBar = GetSnackBar(
               title: 'Tạo đơn hàng thành công',
               subTitle: 'Bạn có thể theo dõi quá trình vận đơn tại mục Xem đơn',
             );
@@ -126,7 +126,7 @@ class PaymentController extends GetxController {
       }
     } else {
       Get.back();
-      CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+      GetSnackBar getSnackBar = GetSnackBar(
         title: 'Tạo đơn hàng thất bại',
         subTitle: 'Vui lòng chọn địa chỉ nhận hàng!',
       );

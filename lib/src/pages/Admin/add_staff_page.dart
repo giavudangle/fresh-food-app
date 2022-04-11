@@ -196,8 +196,7 @@ class _CreateStaffPageState extends State<CreateStaffPage> {
                                 Get.back();
                                 if (value == null) {
                                   print(value);
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Tạo nhân viên thất bại',
                                     subTitle: 'Email đã được đăng kí.',
                                   );
@@ -207,8 +206,7 @@ class _CreateStaffPageState extends State<CreateStaffPage> {
                                   adminController.getAllStaff(
                                     search: '',
                                   );
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Tạo nhân viên thành công',
                                     subTitle: '',
                                   );

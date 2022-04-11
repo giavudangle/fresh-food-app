@@ -171,15 +171,13 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                                 Get.back();
                                 if (value == false) {
                                   print(value);
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Đổi mật khẩu thất bại!',
                                     subTitle: 'Sai mật khẩu cũ',
                                   );
                                   getSnackBar.show();
                                 } else {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Đổi mật khẩu thành công',
                                     subTitle: '',
                                   );

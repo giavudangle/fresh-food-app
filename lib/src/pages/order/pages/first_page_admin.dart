@@ -275,7 +275,7 @@ class WidgetOrder extends StatelessWidget {
                                   id: order.id, status: 1)
                               .then((value) {
                             if (value == true) {
-                              CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                              GetSnackBar getSnackBar = GetSnackBar(
                                 title: 'Chuyển trạng thái đơn hàng thành công',
                                 subTitle:
                                     'Đã chuyển trạng thái thành "Đã xác nhận"',
@@ -285,7 +285,7 @@ class WidgetOrder extends StatelessWidget {
                               orderController.getOrderByAdmin(
                                   search: '', limit: 10, skip: 1);
                             } else {
-                              CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                              GetSnackBar getSnackBar = GetSnackBar(
                                 title: 'Chuyển trạng thái đơn hàng thất bại',
                                 subTitle: '',
                               );
@@ -313,7 +313,7 @@ class WidgetOrder extends StatelessWidget {
                                   id: order.id, status: 4)
                               .then((value) {
                             if (value == true) {
-                              CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                              GetSnackBar getSnackBar = GetSnackBar(
                                 title: 'Hủy đơn hàng thành công',
                                 subTitle: 'Đã chuyển đơn hàng sang đã hủy',
                               );
@@ -322,7 +322,7 @@ class WidgetOrder extends StatelessWidget {
                               orderController.getOrderByAdmin(
                                   search: '', limit: 10, skip: 1);
                             } else {
-                              CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                              GetSnackBar getSnackBar = GetSnackBar(
                                 title: 'Hủy đơn hàng thất bại',
                                 subTitle: '',
                               );
@@ -355,8 +355,7 @@ class WidgetOrder extends StatelessWidget {
                                       id: order.id, status: 2)
                                   .then((value) {
                                 if (value == true) {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title:
                                         'Chuyển trạng thái đơn hàng thành công',
                                     subTitle:
@@ -366,8 +365,7 @@ class WidgetOrder extends StatelessWidget {
                                   orderController.getOrderByAdmin(
                                       search: '', limit: 10, skip: 1);
                                 } else {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title:
                                         'Chuyển trạng thái đơn hàng thất bại',
                                     subTitle: '',
@@ -396,8 +394,7 @@ class WidgetOrder extends StatelessWidget {
                                       id: order.id, status: 4)
                                   .then((value) {
                                 if (value == true) {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Hủy đơn hàng thành công',
                                     subTitle: 'Đã chuyển đơn hàng sang đã hủy',
                                   );
@@ -406,8 +403,7 @@ class WidgetOrder extends StatelessWidget {
                                   orderController.getOrderByAdmin(
                                       search: '', limit: 10, skip: 1);
                                 } else {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title: 'Hủy đơn hàng thất bại',
                                     subTitle: '',
                                   );
@@ -441,8 +437,7 @@ class WidgetOrder extends StatelessWidget {
                                           id: order.id, status: 3)
                                       .then((value) {
                                     if (value == true) {
-                                      CustomGetSnackBar getSnackBar =
-                                          CustomGetSnackBar(
+                                      GetSnackBar getSnackBar = GetSnackBar(
                                         title:
                                             'Chuyển trạng thái đơn hàng thành công',
                                         subTitle:
@@ -452,8 +447,7 @@ class WidgetOrder extends StatelessWidget {
                                       orderController.getOrderByAdmin(
                                           search: '', limit: 10, skip: 1);
                                     } else {
-                                      CustomGetSnackBar getSnackBar =
-                                          CustomGetSnackBar(
+                                      GetSnackBar getSnackBar = GetSnackBar(
                                         title:
                                             'Chuyển trạng thái đơn hàng thất bại',
                                         subTitle: '',
@@ -482,8 +476,7 @@ class WidgetOrder extends StatelessWidget {
                                           id: order.id, status: 4)
                                       .then((value) {
                                     if (value == true) {
-                                      CustomGetSnackBar getSnackBar =
-                                          CustomGetSnackBar(
+                                      GetSnackBar getSnackBar = GetSnackBar(
                                         title: 'Hủy đơn hàng thành công',
                                         subTitle:
                                             'Đã chuyển đơn hàng sang đã hủy',
@@ -493,8 +486,7 @@ class WidgetOrder extends StatelessWidget {
                                       orderController.getOrderByAdmin(
                                           search: '', limit: 10, skip: 1);
                                     } else {
-                                      CustomGetSnackBar getSnackBar =
-                                          CustomGetSnackBar(
+                                      GetSnackBar getSnackBar = GetSnackBar(
                                         title: 'Hủy đơn hàng thất bại',
                                         subTitle: '',
                                       );

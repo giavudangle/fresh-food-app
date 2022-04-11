@@ -290,7 +290,7 @@ class _UpdateAddressPageDetailState extends State<UpdateAddressPageDetail> {
                           .then((value) {
                         if (value == true) {
                           addressController.getAllAddress();
-                          CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                          GetSnackBar getSnackBar = GetSnackBar(
                             title: 'Xóa địa chỉ thành công',
                             subTitle: '',
                           );
@@ -298,7 +298,7 @@ class _UpdateAddressPageDetailState extends State<UpdateAddressPageDetail> {
 
                           getSnackBar.show();
                         } else {
-                          CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                          GetSnackBar getSnackBar = GetSnackBar(
                             title: 'Xóa địa chỉ thất bại',
                             subTitle: '',
                           );
@@ -328,7 +328,7 @@ class _UpdateAddressPageDetailState extends State<UpdateAddressPageDetail> {
 
                       if (value == true) {
                         addressController.getAllAddress();
-                        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                        GetSnackBar getSnackBar = GetSnackBar(
                           title: 'Sửa địa chỉ thành công',
                           subTitle: '',
                         );
@@ -336,7 +336,7 @@ class _UpdateAddressPageDetailState extends State<UpdateAddressPageDetail> {
 
                         getSnackBar.show();
                       } else {
-                        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                        GetSnackBar getSnackBar = GetSnackBar(
                           title: 'Sửa địa chỉ thất bại',
                           subTitle: '',
                         );

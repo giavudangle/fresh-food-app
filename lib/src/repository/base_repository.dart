@@ -5,19 +5,17 @@ import 'package:freshfood/src/providers/user_provider.dart';
 import 'package:http/http.dart' as http;
 
 // const root_url = "freshfoodbe.tk";
-const root_url = "2813-123-21-208-190.ngrok.io";
+const root_url = "54.179.53.76:3005";
 
-const url = "2813-123-21-208-190.ngrok.io";
-
-const socket_url = "2813-123-21-208-190.ngrok.io";
+const socket_url = "54.179.53.76:3005";
 
 class HandleApis {
   Future<String> getBaseURLSocket() async {
     var fcmToken = await getFcmToken();
     debugPrint('FCM Token: ' + fcmToken.toString());
 
-    // return 'http://$socket_url?fcm=$fcmToken&token=Bearer ${userProvider.user.token}';
-    return 'https://$socket_url?fcm=$fcmToken&token=Bearer ${userProvider.user.token}';
+    return 'http://$socket_url?fcm=$fcmToken&token=Bearer ${userProvider.user.token}';
+    //return 'https://$socket_url?fcm=$fcmToken&token=Bearer ${userProvider.user.token}';
   }
 
   Future<String> getFcmToken() async {
@@ -35,8 +33,10 @@ class HandleApis {
     // stderr.write("GET: " + root_url +'/'+ name + '\n' + paramsObject.toString());
     http.Response response = await http.get(
       params == null
-          ? Uri.https(root_url, '/' + name)
-          : Uri.https(root_url, '/' + name, paramsObject),
+          // ? Uri.https(root_url, '/' + name)
+          // : Uri.https(root_url, '/' + name, paramsObject),
+          ? Uri.http(root_url, '/' + name)
+          : Uri.http(root_url, '/' + name, paramsObject),
       // Uri.https(root_url, '/' + name, paramsObject),
       headers: getHeaders(),
     );
@@ -45,8 +45,8 @@ class HandleApis {
   }
 
   post(String name, Map<String, dynamic> body) async {
-    print("In POST");
     // stderr.write("POST: " + root_url +'/'+ name);
+    // return await http.post(Uri.https(root_url, '/' + name),
     return await http.post(Uri.http(root_url, '/' + name),
         // Uri.https(root_url, '/' + name),
         headers: getHeaders(),
@@ -54,8 +54,9 @@ class HandleApis {
   }
 
   postArray(String name, List<Map<String, dynamic>> body) async {
-    //stderr.write("POST: " + root_url +'/'+ name);
-    return await http.post(Uri.http(root_url + "/" + "", ""),
+    // stderr.write("POST: " + root_url +'/'+ name);
+    // return await http.post(Uri.https(root_url, '/' + name),
+    return await http.post(Uri.http(root_url, '/' + name),
         // Uri.https(root_url, '/' + name),
         headers: getHeaders(),
         body: jsonEncode(body));
@@ -63,7 +64,8 @@ class HandleApis {
 
   put(String name, Map<String, dynamic> body) async {
     // stderr.write("POST: " + root_url +'/'+ name);
-    return await http.put(Uri.https(root_url, '/' + name),
+    // return await http.put(Uri.https(root_url, '/' + name),
+    return await http.put(Uri.http(root_url, '/' + name),
         // Uri.https(root_url, '/' + name),
         headers: getHeaders(),
         body: jsonEncode(body));
@@ -71,7 +73,8 @@ class HandleApis {
 
   putArray(String name, List<Map<String, dynamic>> body) async {
     // stderr.write("POST: " + root_url +'/'+ name);
-    return await http.put(Uri.https(root_url, '/' + name),
+    // return await http.put(Uri.https(root_url, '/' + name),
+    return await http.put(Uri.http(root_url, '/' + name),
         // Uri.https(root_url, '/' + name),
         headers: getHeaders(),
         body: jsonEncode(body));
@@ -87,8 +90,10 @@ class HandleApis {
     // stderr.write("GET: " + root_url +'/'+ name + '\n' + paramsObject.toString());
     http.Response response = await http.delete(
       params == null
-          ? Uri.https(root_url, '/' + name)
-          : Uri.https(root_url, '/' + name, paramsObject),
+          // ? Uri.https(root_url, '/' + name)
+          // : Uri.https(root_url, '/' + name, paramsObject),
+          ? Uri.http(root_url, '/' + name)
+          : Uri.http(root_url, '/' + name, paramsObject),
       // Uri.https(root_url, '/' + name, paramsObject),
       headers: getHeaders(),
     );

@@ -278,7 +278,7 @@ class WidgetOrder extends StatelessWidget {
                                   id: order.id, status: 4)
                               .then((value) {
                             if (value == true) {
-                              CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                              GetSnackBar getSnackBar = GetSnackBar(
                                 title: 'Hủy đơn hàng thành công',
                                 subTitle:
                                     'Đơn hàng đã chuyển sang trạng thái đã hủy',
@@ -287,7 +287,7 @@ class WidgetOrder extends StatelessWidget {
                               orderController.getOrder(
                                   search: '', limit: 10, skip: 1);
                             } else {
-                              CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+                              GetSnackBar getSnackBar = GetSnackBar(
                                 title: 'Hủy đơn hàng thất bại',
                                 subTitle: '',
                               );
@@ -323,8 +323,7 @@ class WidgetOrder extends StatelessWidget {
                                       id: order.id, status: 3)
                                   .then((value) {
                                 if (value == true) {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title:
                                         'Chuyển trạng thái đơn hàng thành công',
                                     subTitle:
@@ -334,8 +333,7 @@ class WidgetOrder extends StatelessWidget {
                                   orderController.getOrder(
                                       search: '', limit: 10, skip: 1);
                                 } else {
-                                  CustomGetSnackBar getSnackBar =
-                                      CustomGetSnackBar(
+                                  GetSnackBar getSnackBar = GetSnackBar(
                                     title:
                                         'Chuyển trạng thái đơn hàng thất bại',
                                     subTitle: '',

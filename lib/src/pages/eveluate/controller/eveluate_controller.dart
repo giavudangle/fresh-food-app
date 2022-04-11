@@ -34,7 +34,7 @@ class EveluateController extends GetxController {
         .then((value) {
       Get.back();
       if (value.isNotEmpty) {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Đánh giá thành công',
           subTitle: '',
         );
@@ -46,7 +46,7 @@ class EveluateController extends GetxController {
             ? Get.back()
             : null; // do nothing
       } else {
-        CustomGetSnackBar getSnackBar = CustomGetSnackBar(
+        GetSnackBar getSnackBar = GetSnackBar(
           title: 'Đánh giá thất bại',
           subTitle: '',
         );
