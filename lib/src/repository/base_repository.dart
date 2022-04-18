@@ -4,12 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:freshfood/src/providers/user_provider.dart';
 import 'package:http/http.dart' as http;
 
-// const root_url = "freshfoodbe.tk";
-const root_url = "2813-123-21-208-190.ngrok.io";
-
-const url = "2813-123-21-208-190.ngrok.io";
-
-const socket_url = "2813-123-21-208-190.ngrok.io";
+const root_url = "localhost:8080";
+const url = "localhost:8080";
+const socket_url = "localhost:8080";
 
 class HandleApis {
   Future<String> getBaseURLSocket() async {
@@ -32,17 +29,35 @@ class HandleApis {
         paramsObject[element.split('=')[0].toString()] =
             element.split('=')[1].toString();
       });
-    // stderr.write("GET: " + root_url +'/'+ name + '\n' + paramsObject.toString());
     http.Response response = await http.get(
       params == null
-          ? Uri.https(root_url, '/' + name)
-          : Uri.https(root_url, '/' + name, paramsObject),
-      // Uri.https(root_url, '/' + name, paramsObject),
+          ? Uri.http(root_url, '/' + name)
+          : Uri.http(root_url, '/' + name, paramsObject),
       headers: getHeaders(),
     );
     print(getHeaders()['Authorization']);
     return response;
   }
+
+  /* HTTPS Handler*/
+  // get(String name, [String params]) async {
+  //   Map<String, String> paramsObject = {};
+  //   if (params != null)
+  //     params.split('&').forEach((element) {
+  //       paramsObject[element.split('=')[0].toString()] =
+  //           element.split('=')[1].toString();
+  //     });
+  //   // stderr.write("GET: " + root_url +'/'+ name + '\n' + paramsObject.toString());
+  //   http.Response response = await http.get(
+  //     params == null
+  //         ? Uri.https(root_url, '/' + name)
+  //         : Uri.https(root_url, '/' + name, paramsObject),
+  //     // Uri.https(root_url, '/' + name, paramsObject),
+  //     headers: getHeaders(),
+  //   );
+  //   print(getHeaders()['Authorization']);
+  //   return response;
+  // }
 
   post(String name, Map<String, dynamic> body) async {
     print("In POST");

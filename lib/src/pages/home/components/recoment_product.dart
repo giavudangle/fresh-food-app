@@ -44,7 +44,10 @@ class _RecomendProductCardState extends State<RecomendProductCard> {
                   topRight: Radius.circular(10),
                 ),
                 child: CachedNetworkImage(
-                  imageUrl: widget.product.image[0],
+                  imageUrl: widget.product.image.length > 0
+                      ? widget.product.image[0]
+                      : 'https://cdn.tgdd.vn/2021/12/CookDish/cach-lam-chan-ga-ngam-sa-tac-gion-thom-tham-vi-ngon-kho-cuong-avt-1200x676.jpg',
+                  // This is hardcode, fix it later.
                   fit: BoxFit.cover,
                   height: 100.sp,
                   width: 40.w,

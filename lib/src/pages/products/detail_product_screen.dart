@@ -140,8 +140,9 @@ class _DetailProductPageState extends State<DetailProductPage> {
                                     child: AspectRatio(
                                       aspectRatio: 1.2,
                                       child: CachedNetworkImage(
-                                        imageUrl:
-                                            _.product.image[selectedImage],
+                                        imageUrl: _.product.image.length == 0
+                                            ? 'https://cdn.tgdd.vn/2021/12/CookDish/cach-lam-chan-ga-ngam-sa-tac-gion-thom-tham-vi-ngon-kho-cuong-avt-1200x676.jpg'
+                                            : _.product.image[selectedImage],
                                         fit: BoxFit.fitHeight,
                                         width: 80.w,
                                         height: 70.w,

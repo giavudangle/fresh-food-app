@@ -54,6 +54,7 @@ dependencies:
   cached_network_image: ^3.2.0
   firebase_messaging: ^9.1.0
   firebase_messaging_platform_interface: ^2.1.0
+  overlay_support: ^1.2.1
   
 dev_dependencies:
   flutter_test:
