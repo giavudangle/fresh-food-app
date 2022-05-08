@@ -25,11 +25,6 @@ class DetailProductPage extends StatefulWidget {
 
 class _DetailProductPageState extends State<DetailProductPage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  // List<String> listImage = [
-  //   "https://photo-cms-baonghean.zadn.vn/w607/Uploaded/2021/tuqzxgazsnzm/2018_11_08/143638-1.jpg",
-  //   "https://img.lovepik.com/element/40031/4942.png_860.png",
-  //   "http://img.vinanet.vn/zoom/500/Uploaded/ThuHai/NongSan/pork_JSGL.jpg",
-  // ];
   int selectedImage = 0;
   final productController = Get.put(ProductDetailController());
   final cartController = Get.put(CartController());
@@ -140,9 +135,11 @@ class _DetailProductPageState extends State<DetailProductPage> {
                                     child: AspectRatio(
                                       aspectRatio: 1.2,
                                       child: CachedNetworkImage(
-                                        imageUrl: _.product.image.length == 0
-                                            ? 'https://cdn.tgdd.vn/2021/12/CookDish/cach-lam-chan-ga-ngam-sa-tac-gion-thom-tham-vi-ngon-kho-cuong-avt-1200x676.jpg'
-                                            : _.product.image[selectedImage],
+                                        // imageUrl: _.product.image.length == 0
+                                        //     ? 'https://cdn.tgdd.vn/2021/12/CookDish/cach-lam-chan-ga-ngam-sa-tac-gion-thom-tham-vi-ngon-kho-cuong-avt-1200x676.jpg'
+                                        //     : _.product.image[selectedImage],
+                                        imageUrl:
+                                            _.product.image[selectedImage],
                                         fit: BoxFit.fitHeight,
                                         width: 80.w,
                                         height: 70.w,

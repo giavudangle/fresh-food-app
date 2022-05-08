@@ -78,6 +78,7 @@ class HandleApis {
 
   put(String name, Map<String, dynamic> body) async {
     // stderr.write("POST: " + root_url +'/'+ name);
+    print(Uri.https(root_url, '/' + name));
     return await http.put(Uri.https(root_url, '/' + name),
         // Uri.https(root_url, '/' + name),
         headers: getHeaders(),
